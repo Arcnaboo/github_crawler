@@ -1,10 +1,10 @@
-# SourceGithubAirweave
+# Arcnaboo/github_crawler
 
 Minimal toolkit to crawl GitHub repositories sequentially or concurrently, and discover relevant repos by search.
 
 ## Files
 
-- github.py - Sequential loader
+- github.py - Airweave's Sequential loader
 - github_async.py - Parallel loader
 - crawler.py - Searches for repos and crawls them with github.py
 - README.md - This documentation
