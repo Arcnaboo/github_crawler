@@ -1,12 +1,13 @@
 # Arcnaboo/github_crawler
 
-Minimal toolkit to crawl GitHub repositories sequentially or concurrently, and discover relevant repos by search.
+Minimal toolkit to crawl GitHub repositories sequentially or concurrently, and discover relevant repos by search or from keywords.
 
 ## Files
 
-- github.py - Airweave's Sequential loader
+- github.py - Sequential loader
 - github_async.py - Parallel loader
-- crawler.py - Searches for repos and crawls them with github.py
+- crawler.py - Searches for a term and crawls repos with github.py
+- advanced_crawler.py - Reads keywords from words.txt, finds repos, and crawls them automatically
 - README.md - This documentation
 - LICENSE - MIT License
 
@@ -21,17 +22,22 @@ A GitHub personal access token with repo scope if you want to avoid low rate lim
 
 ## Usage
 
-Search & crawl mode:
+### Search & crawl a single term:
 python crawler.py your search term here
 
 Example:
 python crawler.py vector database
 
-Direct repo mode:
+### Crawl a specific repo directly:
 python crawler.py owner/repo
 
 Example:
-python crawler.py Arcnaboo/SourceGithubAirweave
+python crawler.py Arcnaboo/github_crawler
+
+### Crawl repos for a list of keywords:
+1. Add keywords to words.txt, one per line.
+2. Run:
+python advanced_crawler.py
 
 ## Output
 
